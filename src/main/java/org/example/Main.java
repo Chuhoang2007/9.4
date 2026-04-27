@@ -12,7 +12,7 @@ public class Main {
 
     public static void checkPathError() throws java.io.IOException {
 
-        java.io.File file = new java.io.File("target\\test-file.txt");
+        java.io.File file = new java.io.File("target\\subdir\\test-file.txt");
 
         if (!file.createNewFile()) {
             throw new java.io.IOException("Khong the tao file voi duong dan nay!");
