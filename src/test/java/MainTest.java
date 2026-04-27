@@ -10,8 +10,7 @@ public class MainTest {
         assertEquals(10, Main.tinhTong(5, 5));
     }
     @Test
-    public void testFilePath() {
-        String path = Main.getFilePath();
-        assertTrue(path.contains("\\"));
+    public void testShouldFailOnLinux() throws java.io.IOException {
+        Main.checkPathError();
     }
 }
