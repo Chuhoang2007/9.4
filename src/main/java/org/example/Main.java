@@ -10,13 +10,11 @@ public class Main {
         return a + b;
     }
 
+    // Main.java
     public static void checkPathError() throws java.io.IOException {
-
-        java.io.File file = new java.io.File("target\\subdir\\test-file.txt");
-
-        if (!file.createNewFile()) {
-            throw new java.io.IOException("Khong the tao file voi duong dan nay!");
-        }
+        // Thêm một thư mục con "subdir" không tồn tại
+        java.io.File file = new java.io.File("target\\subdir\\test.txt");
+        file.createNewFile();
     }
     public static void main(String[] args) {
         System.out.println("Tổng là: " + tinhTong(5, 5));
