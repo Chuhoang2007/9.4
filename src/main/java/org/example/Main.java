@@ -10,11 +10,15 @@ public class Main {
         return a + b;
     }
 
-    // Main.java
-    public static void checkPathError() throws java.io.IOException {
-        // Thêm một thư mục con "subdir" không tồn tại
-        java.io.File file = new java.io.File("target\\subdir\\test.txt");
-        file.createNewFile();
+
+    public static void checkPathCorrect() throws java.io.IOException {
+        java.nio.file.Path path = java.nio.file.Paths.get("target", "test-file.txt");
+
+        if (java.nio.file.Files.notExists(path)) {
+            java.nio.file.Files.createFile(path);
+        }
+
+        System.out.println("Đã xử lý file tại: " + path.toAbsolutePath());
     }
     public static void main(String[] args) {
         System.out.println("Tổng là: " + tinhTong(5, 5));

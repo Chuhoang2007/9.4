@@ -10,7 +10,7 @@ public class MainTest {
         assertEquals(10, Main.tinhTong(5, 5));
     }
     @Test
-    public void testShouldFailOnLinux() throws java.io.IOException {
-        Main.checkPathError();
+    public void testPathCorrect() throws java.io.IOException {
+        Main.checkPathCorrect();
     }
 }
